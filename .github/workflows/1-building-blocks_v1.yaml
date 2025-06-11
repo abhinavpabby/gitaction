@@ -1,4 +1,4 @@
-name: 1 - Building Blocks
+name: 1-building-blocks_v1
 
 on: push
 
@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Say hello
-        run: echo "Hello, world!"
+        run: echo "Hello"
  echo-goodbye:
     runs-on: ubuntu-latest
     steps:
@@ -17,4 +17,3 @@ jobs:
           exit 100
       - name: Say goodbye
         run: echo "Goodbye!"
-  
