@@ -7,13 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Say hello
-        run:
- echo-goodbye:
+        run: echo "Hello!"
+
+  echo-goodbye:
     runs-on: ubuntu-latest
     steps:
       - name: Successful step
         run: |
           echo "I will succeed"
-          exit 100
+          exit 100  # This will fail the job; if intentional, consider using continue-on-error
       - name: Say goodbye
         run: echo "Goodbye!"
+        if: ${{ always() }}  # This ensures it runs even if the previous step fails
