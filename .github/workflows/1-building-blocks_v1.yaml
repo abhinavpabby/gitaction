@@ -15,7 +15,7 @@ jobs:
       - name: Successful step
         run: |
           echo "I will succeed"
-          exit 0  # This will fail the job; if intentional, consider using continue-on-error
+          exit 0  # This will su the job; if intentional, consider using continue-on-error
       - name: Say goodbye
         run: echo "Goodbye!"
         if: ${{ always() }}  # This ensures it runs even if the previous step fails
