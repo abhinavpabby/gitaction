@@ -6,9 +6,8 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      -name: Show the trigger
-       run:|
-          echo "even name"
-          echo "Event type:${{ github.event_name }}"
-          echo "Event name:${{ github.event.head_commit.message || github.event.commits[0].message || 'N/A' }}"
-
+      - name: Show the trigger
+        run: |
+          echo "event name"
+          echo "Event type: ${{ github.event_name }}"
+          echo "Event name: ${{ github.event.head_commit.message || github.event.commits[0].message || 'N/A' }}"
