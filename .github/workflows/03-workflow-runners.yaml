@@ -9,5 +9,5 @@ jobs:
       - name: SHOW OS
         run: |
           echo "running on UBUNTU OS"
-          echo "runner_os: "$RUNNER_OS"
+          echo "runner_os: $RUNNER_OS"
         
