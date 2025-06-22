@@ -6,7 +6,7 @@ jobs:
   ubuntu-echo:
     runs-on: ubuntu-latest
     steps:
-      - name: SHOW OS
+      - name: SHOW OS1
         run: |
           echo "running on UBUNTU OS"
           echo "runner_os: $RUNNER_OS"
